@@ -1,0 +1,8 @@
+<h1 class="alert alert-warning mt-4">Clients</h1>
+<button class="btn btn-danger col" ng-click="$ctrl.toggle()">
+  {{$ctrl.btn}}
+</button>
+
+<div ng-show="$ctrl.show" class="mt-4">
+  <client ng-repeat="item in $ctrl.data" item="item"></client>
+</div>

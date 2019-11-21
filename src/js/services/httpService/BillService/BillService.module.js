@@ -1,4 +1,4 @@
 (function() {
   "use strict";
-  angular.module("UserService", []);
+  angular.module("BillService", ["http", "angular-jwt"]);
 })();

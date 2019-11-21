@@ -12,11 +12,7 @@
       });
     };
     http.post = function(details) {
-      return $http({
-        method: "POST",
-        url: http.url + details.link,
-        body: details.body
-      });
+      return $http.post(http.url + details.link, details.body);
     };
   }
 })();

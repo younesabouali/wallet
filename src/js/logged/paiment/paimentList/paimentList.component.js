@@ -9,7 +9,6 @@
     const $ctrl = this;
     PaimentService.get().then(function(res) {
       $ctrl.data = res.data;
-      console.log("$ctrl.data", $ctrl.data);
     });
     $ctrl.btn = "show";
     $ctrl.toggle = function() {

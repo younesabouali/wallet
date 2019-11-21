@@ -1,8 +1,10 @@
 (function() {
   "use strict";
 
-  angular.module("wallet", ["logged"]).component("myhello", {
-    // angular.module("wallet", ["logged"]).component("myhello", {
-    template: "HssdfsdfskjldkR"
-  });
+  angular.module("wallet", [
+    "logged",
+    "commonComponent",
+    "ui.router",
+    "angular-jwt"
+  ]);
 })();

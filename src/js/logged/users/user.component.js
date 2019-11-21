@@ -4,11 +4,9 @@
     templateUrl: "/src/js/logged/users/user.template.html",
     controller: userController
   });
-  userController.$inject = ["UserService"];
-  function userController(UserService) {
+  userController.$inject = ["jwtHelper"];
+  function userController(jwtHelper) {
     const $ctrl = this;
-    UserService.get().then(function(res) {
-      $ctrl.data = res.data;
-    });
+    $ctrl.tokenPayload = jwtHelper.decodeToken(localStorage.getItem("token"));
   }
 })();

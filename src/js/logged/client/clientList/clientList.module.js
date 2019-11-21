@@ -1,4 +1,4 @@
 (function() {
   "use strict";
-  angular.module("clientList", ["client"]);
+  angular.module("clientList", ["client", "ClientService"]);
 })();

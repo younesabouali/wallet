@@ -2,15 +2,30 @@
   "use strict";
   angular.module("UserService").service("UserService", UserService);
 
-  UserService.$inject = ["http"];
-  function UserService(http) {
+  UserService.$inject = ["http", "jwtHelper", "$location"];
+  function UserService(http, jwtHelper, $location) {
     var service = this;
-    service.userId = "72fdcd5d-6ec8-4418-b754-ec716f3eba70";
-    service.get = function() {
-      return http.get("users/" + service.userId);
+
+    service.register = async function(body) {
+      const res = await http.post({ link: "users", body });
+      localStorage.setItem("token", res.data);
+      var tokenPayload = jwtHelper.decodeToken(localStorage.getItem("token"));
+
+      $location.path("/main");
+      return tokenPayload;
     };
-    service.post = function(body) {
-      return http.post({ link: "users/", body });
+    service.login = async function(body) {
+      const res = await http.post({ link: "auth", body });
+
+      localStorage.setItem("token", res.data);
+      var tokenPayload = jwtHelper.decodeToken(localStorage.getItem("token"));
+
+      $location.path("/main");
+      return tokenPayload;
+    };
+    service.logout = function() {
+      localStorage.removeItem("token");
+      $location.path("/login").replace();
     };
   }
 })();

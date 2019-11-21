@@ -6,44 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <!-- <script src="src/js/"></script> -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/main.css" />
     <script src="/src/lib/angular.min.js"></script>
-    <!-- <script src="/src/lib/bootstrap.min.js"></script> -->
+    <script src="src/lib/angular-ui-router.min.js"></script>
     <!-- Modules -->
     <script src="/src/js/wallet.module.js"></script>
     <script src="/src/js/logged/logged.module.js"></script>
+    <script src="/src/js/commonComponent/commonComponent.module.js"></script>
+
     <script src="/src/js/logged/status/Status.module.js"></script>
     <script src="/src/js/logged/paiment/Paiment.module.js"></script>
     <script src="/src/js/logged/client/Client.module.js"></script>
     <script src="/src/js/logged/bill/Bill.module.js"></script>
-
+    <!-- Component Module -->
+    <!--  -->
     <script src="/src/js/logged/users/User.module.js"></script>
     <script src="/src/js/logged/status/statusElement/status.module.js"></script>
     <script src="/src/js/logged/paiment/paimentElement/paiment.module.js"></script>
     <script src="/src/js/logged/bill/billElement/bill.module.js"></script>
     <script src="/src/js/logged/client/clientElement/client.module.js"></script>
+    <script src="/src/js/logged/client/clientList/clientList.module.js"></script>
     <script src="/src/js/logged/status/statusList/statusList.module.js"></script>
     <script src="/src/js/logged/paiment/paimentList/paimentList.module.js"></script>
-
+    <script src="/src/js/logged/bill/billList/billList.module.js"></script>
+    <!--  -->
+    <script src="/src/js/commonComponent/myInput/myInput.module.js"></script>
+    <script src="/src/js/commonComponent/navbar/navbar.module.js"></script>
+    <script src="/src/js/logged/users/registerForm/registerForm.module.js"></script>
+    <script src="/src/js/logged/users/loginForm/loginForm.module.js"></script>
+    <!-- Service Module -->
+    <!-- http -->
     <script src="/src/js/services/httpService/UserService/UserService.module.js"></script>
     <script src="/src/js/services/httpService/StatusService/StatusService.module.js"></script>
     <script src="/src/js/services/httpService/PaimentService/PaimentService.module.js"></script>
+    <script src="/src/js/services/httpService/ClientService/ClientService.module.js"></script>
+    <script src="/src/js/services/httpService/BillService/BillService.module.js"></script>
+    <!-- views Controller -->
+    <!-- <script src="/src/js/login.controller.js"></script> -->
+
+    <!-- jwt -->
+    <script src="/src/js/services/angularJwt/angularJwt.js"></script>
+    <script src="/src/js/services/angularJwt/services/authManager.js"></script>
+    <script src="/src/js/services/angularJwt/services/interceptor.js"></script>
+    <script src="/src/js/services/angularJwt/services/jwt.js"></script>
+    <script src="/src/js/services/angularJwt/services/jwtOptions.js"></script>
+    <script src="/src/js/services/angularJwt/services/urlUtils.js"></script>
     <!-- Components -->
+    <script src="/src/js/routes.js"></script>
+    <script src="/src/js/logged/users/user.component.js"></script>
     <script src="/src/js/logged/status/statusElement/status.component.js"></script>
+    <script src="/src/js/logged/client/clientElement/client.component.js"></script>
+    <script src="/src/js/logged/paiment/paimentElement/paiement.component.js"></script>
+    <script src="/src/js/logged/bill/billElement/bill.component.js"></script>
     <script src="/src/js/logged/status/statusList/statusList.component.js"></script>
     <script src="/src/js/logged/paiment/paimentList/paimentList.component.js"></script>
-    <script src="/src/js/logged/paiment/paimentElement/paiement.component.js"></script>
-    <script src="/src/js/logged/users/user.component.js"></script>
+    <script src="/src/js/logged/client/clientList/clientList.component.js"></script>
+    <script src="/src/js/logged/bill/billList/billList.component.js"></script>
+    <!--  -->
+    <script src="/src/js/logged/users/registerForm/registerForm.component.js"></script>
+    <script src="/src/js/logged/users/loginForm/loginForm.component.js"></script>
+    <script src="/src/js/commonComponent/myInput/myInput.component.js"></script>
+    <script src="/src/js/commonComponent/navbar/navbar.component.js"></script>
+
     <!-- Service -->
     <script src="/src/js/services/httpService/http.service.js"></script>
     <script src="/src/js/services/httpService/StatusService/StatusService.service.js"></script>
     <script src="/src/js/services/httpService/UserService/userService.service.js"></script>
     <script src="/src/js/services/httpService/PaimentService/PaimentService.service.js"></script>
+    <script src="/src/js/services/httpService/ClientService/ClientService.service.js"></script>
+    <script src="/src/js/services/httpService/BillService/BillService.service.js"></script>
   </head>
   <body class="container">
-    <user></user>
-    <status-list></status-list>
-    <paiment-list></paiment-list>
+    <ui-view></ui-view>
   </body>
+  <!-- <status-list></status-list> -->
+  <!-- <user></user> -->
+  <!-- <paiment-list></paiment-list>  -->
+  <!--  -->
+  <!-- <ui-view></ui-view> -->
+  <!-- <login-form></login-form> -->
+  <!-- <register-form></my-form> -->
+  <!--<bill-list></bill-list>  -->
+  <!-- <client-list></client-list> -->
 </html>

@@ -4,5 +4,5 @@
 })();
 (function() {
   "use strict";
-  angular.module("Bill", ["bill"]);
+  angular.module("Bill", ["billList"]);
 })();

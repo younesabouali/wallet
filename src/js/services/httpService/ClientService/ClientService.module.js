@@ -1,4 +1,4 @@
 (function() {
   "use strict";
-  angular.module("ClientService", []);
+  angular.module("ClientService", ["http", "angular-jwt"]);
 })();
