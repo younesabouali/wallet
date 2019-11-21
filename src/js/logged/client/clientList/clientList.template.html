@@ -4,5 +4,9 @@
 </button>
 
 <div ng-show="$ctrl.show" class="mt-4">
-  <client ng-repeat="item in $ctrl.data" item="item"></client>
+  <client
+    ng-repeat="item in $ctrl.data"
+    item="item"
+    on-remove="$ctrl.remove(id)"
+  ></client>
 </div>

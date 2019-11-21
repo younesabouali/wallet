@@ -10,7 +10,13 @@
           amountOfTransaction : {{$ctrl.item.amountOfTransaction}}
         </p>
 
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <button class="btn btn-warning">edit paiment</button>
+        <button
+          class="btn btn-danger"
+          ng-click="$ctrl.onRemove({id:$ctrl.item.id})"
+        >
+          delete Paiment
+        </button>
       </div>
     </div>
   </div>

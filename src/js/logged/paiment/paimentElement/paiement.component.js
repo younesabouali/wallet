@@ -4,7 +4,8 @@
     templateUrl: "/src/js/logged/paiment/paimentElement/paiment.template.html",
     controller: paimentController,
     bindings: {
-      item: "<"
+      item: "<",
+      onRemove: "&"
     }
   });
   function paimentController() {

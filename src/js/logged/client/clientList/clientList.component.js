@@ -19,5 +19,10 @@
       }
       $ctrl.show = !$ctrl.show;
     };
+    $ctrl.remove = function(id) {
+      ClientService.delete(id).then(function(res) {
+        console.log(res);
+      });
+    };
   }
 })();

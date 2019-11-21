@@ -1,8 +1,17 @@
 <h1 class="alert alert-warning mt-4">Paiments</h1>
-<button class="btn btn-danger col" ng-click="$ctrl.toggle()">
-  {{$ctrl.btn}}
-</button>
+<div class="btn-group " role="group" aria-label="Basic example">
+  <button class="btn btn-danger col-6" ng-click="$ctrl.toggle()">
+    {{$ctrl.btn}}
+  </button>
+  <button class="btn btn-success col-6" ng-click="$ctrl.toggle()">
+    Add Paiment
+  </button>
+</div>
 
 <div ng-show="$ctrl.show" class="mt-4">
-  <paiment ng-repeat="item in $ctrl.data" item="item"></paiment>
+  <paiment
+    ng-repeat="item in $ctrl.data"
+    item="item"
+    on-remove="$ctrl.remove(id)"
+  ></paiment>
 </div>

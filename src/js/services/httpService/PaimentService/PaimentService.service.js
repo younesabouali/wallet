@@ -6,8 +6,20 @@
     var service = this;
     var tokenPayload = jwtHelper.decodeToken(localStorage.getItem("token"));
 
-    service.get = function() {
-      return http.get("paiments/" + tokenPayload.id);
+    service.get = async function() {
+      const res = await http.get("paiments/" + tokenPayload.id);
+      return res;
+    };
+    service.add = async function(body) {
+      const res = await http.post("paiments/" + tokenPayload.id, body);
+      return res;
+    };
+    service.update = async function(details) {
+      return http.put("paiments/" + details.id, details.body);
+    };
+    service.delete = async function(details) {
+      const res = await http.delete("paiments/" + details);
+      return res;
     };
   }
 })();

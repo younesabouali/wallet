@@ -4,7 +4,8 @@
     templateUrl: "/src/js/logged/client/clientElement/client.template.html",
     controller: clientController,
     bindings: {
-      item: "<"
+      item: "<",
+      onRemove: "&"
     }
   });
   function clientController() {

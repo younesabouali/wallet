@@ -10,14 +10,19 @@
     PaimentService.get().then(function(res) {
       $ctrl.data = res.data;
     });
-    $ctrl.btn = "show";
+    $ctrl.btn = "show Paiments";
     $ctrl.toggle = function() {
       if ($ctrl.show === true) {
-        $ctrl.btn = "show";
+        $ctrl.btn = "show Paiments";
       } else {
-        $ctrl.btn = "hide";
+        $ctrl.btn = "hide Paiments";
       }
       $ctrl.show = !$ctrl.show;
+    };
+    $ctrl.remove = function(id) {
+      PaimentService.delete(id).then(function(res) {
+        console.log(res);
+      });
     };
   }
 })();

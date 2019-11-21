@@ -4,7 +4,8 @@
     templateUrl: "/src/js/logged/bill/billElement/bill.template.html",
     controller: billController,
     bindings: {
-      item: "<"
+      item: "<",
+      onRemove: "&"
     }
   });
   function billController() {

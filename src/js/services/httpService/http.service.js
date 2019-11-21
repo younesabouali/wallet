@@ -14,5 +14,11 @@
     http.post = function(details) {
       return $http.post(http.url + details.link, details.body);
     };
+    http.put = function(details) {
+      return $http.put(http.url + details.link, details.body);
+    };
+    http.delete = function(details) {
+      return $http.delete(http.url + details);
+    };
   }
 })();
